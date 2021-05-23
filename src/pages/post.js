@@ -22,6 +22,8 @@ export default function post(props) {
   const [province, setProvince] = useState("");
   const [time, setTime] = useState(0);
   //time
+  const [isEdit, setIsEdit] = useState(false);
+  const [jobID, setJobID] = useState();
 
   //path
   const [img1, setImg1] = useState();
@@ -73,8 +75,7 @@ export default function post(props) {
       });
   }, []);
 
-  const [isEdit, setIsEdit] = useState(false);
-  const [jobID, setJobID] = useState();
+
 
   function setEditJobs(j) {
     setJobID(j);
@@ -209,17 +210,14 @@ export default function post(props) {
     setType("");
     setProvince("");
     setTime(0);
-
     setImg1();
     setImg2();
     setImg3();
     setImg4();
-
     setImgF1();
     setImgF2();
     setImgF3();
     setImgF4();
-
     setcheckUploadimgF1(false);
     setcheckUploadimgF2(false);
     setcheckUploadimgF3(false);
